@@ -1,0 +1,46 @@
+@charset "UTF-8";   
+
+:root {
+    --color-back: #004990;
+    --color-back-semi : #0048908f;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: "Josefin Sans" , sans-serif;
+    font-size: small;
+    height: 100dvh;
+}
+html {
+    height: 100dvh;
+}
+
+header{
+    background-color: var(--color-back);
+    color: white;
+    padding: 10px;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    background-color:var(--color-back-semi) ;
+    padding: 10px;
+}
+
+#card{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 60%;
+    background-color: var(--color-back-semi);
+    margin: auto;
+}
