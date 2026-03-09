@@ -15,22 +15,26 @@
 <body>
     <header>
         <h1>PATIO DIGITAL - SISTEMA DE GESTÃO VEICULAR</h1>
+
     </header>
     <nav>
-        <a href="cadastro.html"><i class="fa-solid fa-plus"></i></a>
+        <a href="index.html"><i class="fa-solid fa-house"></i></a>
+        <a href="consulta.html"><i class="fa-solid fa-ca"></i></a>
     </nav>
 
-    <div class="card">
-        <div class="cards">
-            <h1>Consulta de Veículos</h2>
-            <div class="inputs">
-                <h2>Sua placa</h2>
-                <input type="text" id="placa" placeholder="Sua placa">
-                <h2>Seu CPF</h2>
-                <input type="text" id="placa" placeholder="Seu CPF">
-                <button onclick="consultarVeiculo()">CONSULTAR</button>
-            </div>
-        </div>
+<div class="card"> 
+    <h2>Histórico do Veículo</h2> 
+    <table>
+    <thead> 
+    <tr> 
+    <th>Data</th>
+    <th>Evento</th> 
+    <th>Responsável</th>
+    </tr> 
+    </thead> 
+    <tbody id="historicoTabela">
+    </tbody>
+    </table>
     </div>
 
     
