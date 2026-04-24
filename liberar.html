@@ -18,7 +18,7 @@
     </header>
     <nav>
         <a href="index.html"><i class="fa-solid fa-home"></i></a>
-        <a href="cadastro.html"><i class="fa-solid fa-plus"></i></a>
+        <a href="login.html"><i class="fa-solid fa-plus"></i></a>
         <a href="dashboard.html"><i class="fa-solid fa-chart-column"></i></a>
     </nav>
 
@@ -26,11 +26,11 @@
 
         <div class="inputs">
             <h2>Liberar Veículo</h2>
-            <input type="text" id="placa" placeholder="Placa" readonly>
-            <input type="text" id="modelo" placeholder="Modelo" readonly>
-            <input type="text" id="cpf" placeholder="CPF" readonly>
-            <input type="text" id="diasPatio" placeholder="Dias no pátio" readonly>
-            <input type="text" id="valorTotal" placeholder="Valor total" readonly>
+            <input type="text" id="placa" placeholder="Placa" >
+            <input type="text" id="modelo" placeholder="Modelo" >
+            <input type="text" id="cpf" placeholder="CPF" >
+            <input type="text" id="diasPatio" placeholder="Dias no pátio" >
+            <input type="text" id="valorTotal" placeholder="Valor total" >
             <input type="date" id="dataLiberacao">
             <select id="formaPagamento">
             <option>Forma de pagamento</option>
@@ -39,11 +39,11 @@
             <option>PIX</option>
             </select>
             <textarea placeholder="Observações"></textarea>
-            <button>Liberar Veículo</button>
+            <button onclick="liberarVeiculo()">Liberar veículo</button>
         </div>
 
     </div>
 
-    
+    <script src="js/script.js"></script>
 </body>
 </html>

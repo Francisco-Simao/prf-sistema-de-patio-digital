@@ -12,7 +12,7 @@
 </head>
     <title>PRF - PATIO DIGITAL</title>
 </head>
-<body>
+<body onload="carregarConsulta()">
     <header>
         <h1>PATIO DIGITAL - SISTEMA DE GESTÃO VEICULAR</h1>
 
@@ -23,12 +23,15 @@
 
     <div class="card consulta-card">
         <div class="cards">
-            <h1>Seu Veiculo</h2>
+            <h1>Seu Veiculo</h1>
             <div class="inputs consulta-inputs">            
                 <h2>Placa</h2>
                 <input type="text" id="placa" class="consulta-input" readonly>
                 <h2>Modelo</h2>
                 <input type="text" id="modelo" class="consulta-input" readonly>
+
+                <h2>CPF</h2>
+                <input type="text" id="cpf" class="consulta-input" readonly>
 
                 <h2>Data de retenção</h2>
                 <input type="text" id="dataRetencao" class="consulta-input" readonly>
@@ -48,7 +51,7 @@
                 <h2>Valor total</h2>
                 <input type="text" id="valorTotal" class="consulta-input" readonly>
 
-                <button onclick="verHistorico()">Consultar Histórico do Veículo</button>
+                <button onclick="irHistorico()">Histórico</button>
             </div>
 
 
@@ -56,6 +59,6 @@
         </div>
     </div>
 
-    
+    <script src="js/script.js"></script>
 </body>
 </html>
