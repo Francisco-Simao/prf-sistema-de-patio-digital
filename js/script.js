@@ -172,7 +172,7 @@ async function carregarDashboard(){
 
 try{
 
-const resposta = await fetch("http://localhost:8080/veiculos/dashboard"); // ajuste se precisar
+const resposta = await fetch(`${API}/veiculos/dashboard`); // ajuste se precisar
 const dados = await resposta.json();
 
 console.log(dados); //  IMPORTANTE PRA DEBUG
