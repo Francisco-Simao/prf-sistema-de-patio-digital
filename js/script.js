@@ -70,34 +70,48 @@ window.location.href = "historico.html";
 // ===============================
 // HISTÓRICO (historico.html)
 // ===============================
-function carregarHistorico(){
+function formatarData(data) {
 
-const tabela = document.getElementById("historicoTabela");
+    const d = new Date(data);
 
-if(!tabela) return;
+    // gambiarra: corrige -3 horas (UTC → Brasil)
+    d.setHours(d.getHours() - 3);
 
-const veiculo = JSON.parse(localStorage.getItem("veiculo"));
-
-if(!veiculo || !veiculo.historico) return;
-
-tabela.innerHTML = "";
-
-veiculo.historico.forEach(evento => {
-
-tabela.innerHTML += `
-<tr>
-<td>${formatarData(evento.dataHora)}</td>
-<td>${evento.descricao}</td>
-<td>Sistema</td>
-</tr>
-`;
-
-});
+    return d.toLocaleString("pt-BR", {
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric",
+        hour: "2-digit",
+        minute: "2-digit"
+    });
 
 }
 
-function formatarData(data){
-return new Date(data).toLocaleString("pt-BR");
+
+function carregarHistorico(){
+
+    const tabela = document.getElementById("historicoTabela");
+
+    if(!tabela) return;
+
+    const veiculo = JSON.parse(localStorage.getItem("veiculo"));
+
+    if(!veiculo || !veiculo.historico) return;
+
+    tabela.innerHTML = "";
+
+    veiculo.historico.forEach(evento => {
+
+        tabela.innerHTML += `
+        <tr>
+            <td>${formatarData(evento.dataHora)}</td>
+            <td>${evento.descricao}</td>
+            <td>Sistema</td>
+        </tr>
+        `;
+
+    });
+
 }
 
 // ===============================
